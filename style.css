@@ -9,6 +9,7 @@ html, body {
   height: 100%;
   background-color: black;
   scrollbar-width: none;
+  touch-action: none;
 }
 
 
@@ -16,9 +17,88 @@ html, body {
     height: 100px;
     width: 100px;
     background-color: black;
-    border: 10px solid red;
+    border: 2px solid red;
     border-radius: 50%;
     position: absolute;
     cursor: none;
+}
+
+
+@keyframes boxAnimation {
+    0%{
+        /* transform: translate(0,0);*/
+        scale: 1;
+    }
+    100%{
+        /* transform: translate(10px,10px); */
+        scale: 0.2;
+    }
+}
+
+.extButton{
+    height: 40px;
+    width: 40px;
+    border-left: 5px solid snow;
+    border-bottom: 5px solid snow;
+    border-right: none;
+    border-top: none;
+    border-radius: 0 0 0 50px;
+    background-color: #161515;
+    position: absolute;
+    right: 0;
+    top:0;
+    z-index: 1;
+}
+
+.extButton:hover{
+    scale: 0.95;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.extButton:active{
+    border-bottom-color: green;
+    border-left-color: green;
+}
+
+.ext{
+    height: 80px;
+    width: 420px;
+    border-radius: 20px;
+    border: 5px solid snow;
+    z-index: 1;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    transition: 0s;
+}
+
+.ext Button{
+    height: 50px;
+    width: 100px;
+    border-radius: 20px;
+    border: 5px solid hotpink;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    background-color: #000;
+    color: snow;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.ext Button:active{
+    scale: 0.8;
+    transition: 0.2s ease;
+}
+
+.ext .animationButton{
+    width: 150px;
 }
 
